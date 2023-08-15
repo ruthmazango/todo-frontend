@@ -10,6 +10,7 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { TaskEditComponent } from './task-edit/task-edit.component';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
+//import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2/lib/sweetalert2.module';
 
 @NgModule({
   declarations: [

@@ -34,7 +34,7 @@
                                         </th>
                                         <th>ID</th>
                                         <th>Title</th>
-                                        
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -50,12 +50,15 @@
                                         <td class="pe-0">
                                             {{todo.id}}
                                         </td>
-                                        <td><a [routerLink]="['/task', todo.id]">
+                                        <td>
                                             {{todo.title}}
-                                        </a>
-                                            
                                         </td>
-                                        
+                                        <td>
+                                            <div class="ms-auto">
+												<a [routerLink]="['/task', todo.id]" class="btn btn-primary btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+												<a (click)="todo && delete(todo)" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
+											</div>
+                                        </td>
                                     </tr>
                                     
                                 </tbody>

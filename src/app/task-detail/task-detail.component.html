@@ -6,7 +6,7 @@
                 
             </div>
             
-            <form class="profile-form">
+            <form class="profile-form" [formGroup] = "todoUpdateForm" (ngSubmit)="onSubmit()" >
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-6 m-b30">
@@ -15,17 +15,16 @@
                         </div>
                         <div class="col-sm-6 m-b30">
                             <label class="form-label">Title</label>
-                            <input type="text" class="form-control" value="{{todo?.title}}">
+                            <input type="text" class="form-control" value="{{todo?.title}}" formControlName="title" required>
                         </div>
                         <div class="col-sm-6 m-b30">
                             <label class="form-label">Description</label>
-                            <textarea type="text" class="form-control" value="{{todo?.description}}"></textarea>
+                            <textarea type="text" class="form-control" value="{{todo?.description}}" formControlName="description" required></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-primary">UPDATE</button>
-                    <button class="btn btn-danger">DELETE</button>
+                    <button class="btn btn-primary" type="submit">UPDATE</button>
                 </div>
             </form>
         </div>
